@@ -57,8 +57,8 @@ def simulate():
     ani = animation.FuncAnimation(fig, animate, frames=len(tt), interval=50)
 
     # Guardar la animación como gif
-    gif_path = os.path.join('static', 'result.gif')
-    ani.save(gif_path, writer='imagemagick', fps=20)
+    mp4_path = os.path.join('static', 'result.mp4')
+    ani.save(mp4_path, writer='ffmpeg', fps=20)
     plt.close(fig)
 
     return jsonify(result_image=gif_path)
