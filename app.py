@@ -59,7 +59,7 @@ def simulate():
     # Guardar la animación como gif
     gif_path = os.path.join('static', 'result.gif')
     ani.save(gif_path, writer='imagemagick', fps=20)
-    plt.close()
+    plt.close(fig)
 
     return jsonify(result_image=gif_path)
 
